@@ -1,28 +1,44 @@
-.clock {
-  width: 200px;
-  height: 200px;
-  border: 10px solid #333;
-  border-radius: 50%;
+
+.clockContainer {
   position: relative;
-}
-
-.hand {
+  margin: auto;
+  height: 40vw;
+  /*to make the height and width responsive*/
+  width: 40vw;
+  background: url(https://media.geeksforgeeks.org/wp-content/uploads/20210302161254/imgonlinecomuaCompressToSizeOmNATjUMFKw-300x300.jpg) no-repeat;
+  /*setting our background image*/
+  background-size: 100%;
+  }
+  
+  .hour,
+  .minute,
+  .second {
   position: absolute;
-  width: 50%;
-  height: 2px;
-  background-color: #333;
-  top: 50%;
-  transform-origin: 100%;
-}
-
-.hour {
-  background-color: #333;
-}
-
-.minute {
-  background-color: #555;
-}
-
-.second {
-  background-color: #f00;
-}
+  background: black;
+  border-radius: 10px;
+  transform-origin: bottom;
+  }
+  
+  .hour {
+  width: 1.8%;
+  height: 25%;
+  top: 25%;
+  left: 48.85%;
+  opacity: 0.8;
+  }
+  
+  .minute {
+  width: 1.6%;
+  height: 30%;
+  top: 19%;
+  left: 48.9%;
+  opacity: 0.8;
+  }
+  
+  .second {
+  width: 1%;
+  height: 40%;
+  top: 9%;
+  left: 49.25%;
+  opacity: 0.8;
+  }
