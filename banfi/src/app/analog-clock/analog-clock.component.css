@@ -1,46 +1,20 @@
-.clock {
-    width: 200px;
-    height: 200px;
-    border: 8px solid #333;
-    border-radius: 50%;
-    position: relative;
-    margin: 20px auto;
-    background: white;
-  }
-  
-  .hand {
-    width: 50%;
-    height: 6px;
-    background: #333;
-    position: absolute;
-    top: 50%;
-    transform-origin: 100%;
-    transform: rotate(90deg);
-    transition: transform 0.5s ease-in-out;
-  }
-  
-  .hour {
-    height: 8px;
-    background: #000;
-  }
-  
-  .minute {
-    height: 6px;
-  }
-  
-  .second {
-    height: 4px;
-    background: red;
-  }
-  
-  .center {
-    width: 10px;
-    height: 10px;
-    background: #333;
-    border-radius: 50%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  
+.digital-clock {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;  /* Adjusted height for better fit */
+  width: 300px;   /* Adjusted width for better fit */
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  color: #ffffff;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 2.5em;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  margin: 20px auto;
+  border: 2px solid #ffffff;
+}
+
+.digital-clock h2 {
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}

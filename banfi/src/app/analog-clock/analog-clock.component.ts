@@ -13,6 +13,8 @@ export class AnalogClockComponent implements OnChanges {
 
   ngOnChanges(): void {
     if (this.time) {
+      console.log('Input time:', this.time); // Log per verificare l'input
+
       const timeParts = this.time.split(/[: ]/);
       let hours = +timeParts[0];
       const minutes = +timeParts[1];
@@ -28,6 +30,16 @@ export class AnalogClockComponent implements OnChanges {
       this.hourHand = (hours % 12) * 30 + minutes * 0.5; // 360 / 12 = 30
       this.minuteHand = minutes * 6; // 360 / 60 = 6
       this.secondHand = seconds * 6; // 360 / 60 = 6
+
+      console.log('Hours:', hours, 'Minutes:', minutes, 'Seconds:', seconds);
+      console.log(
+        'Hour hand angle:',
+        this.hourHand,
+        'Minute hand angle:',
+        this.minuteHand,
+        'Second hand angle:',
+        this.secondHand
+      );
     }
   }
 }
