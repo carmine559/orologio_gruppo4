@@ -1,73 +1,27 @@
 .weather-clock-container {
-    max-width: 400px;
-    margin: 50px auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    text-align: center;
-  }
-  
-  .page-title {
-    opacity: 0;
-    animation: fadeIn 3s ease forwards;
-  }
-  
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-  
-  
-  input {
-    padding: 8px;
-    margin-bottom: 10px;
-    margin-right: 5px; /* Aggiunto margine destro per separare l'input dal pulsante */
-  }
-  
-  button {
-    padding: 8px 20px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-bottom: 10px; /* Aggiunto margine inferiore per separare il pulsante dal resto delle informazioni */
-  }
-  
-  
-  button:hover {
-    background-color: #0056b3;
-  }
-  
-  .weather-info {
-    margin-top: 20px;
-    text-align: center;
-    opacity: 1;
-    transition: opacity 0.5s ease;
-  }
-  
-  .weather-info.hidden {
-    opacity: 0;
-  }
-  
-  .weather-info p {
-    margin: 10px 0;
-  }
-  
-  .weather-background {
-    background-image: url('https://media-assets.wired.it/photos/65562048e250788db3b4cd40/16:9/w_1600,c_limit/Google-DeepMind-AI-Header_GraphCast_01.jpg'); /* Sostituisci con il percorso corretto dell'immagine */
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    opacity: 0.8; /* Assicura che lo sfondo sia dietro agli altri elementi */
-  }
-  
+  max-width: 400px;
+  margin: 0 auto; /* Modifica: Rimuovi il margine superiore e imposta il margine inferiore a 50px */
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+  position: absolute; /* Modifica: Imposta il posizionamento assoluto per posizionarlo in fondo alla pagina */
+  bottom: 50px; /* Modifica: Posiziona il container a 50px dal fondo della pagina */
+  left: 50%; /* Modifica: Centra il container orizzontalmente */
+  transform: translateX(-50%); /* Modifica: Centra il container orizzontalmente */
+  background-color: rgba(255, 255, 255, 0.8); /* Modifica: Aggiunge un background bianco traslucido */
+}
+
+/* Rimuovi lo stile per la classe .page-title poiché non dovrebbe essere visibile */
+
+.weather-background {
+  background-image: url('https://media-assets.wired.it/photos/65562048e250788db3b4cd40/16:9/w_1600,c_limit/Google-DeepMind-AI-Header_GraphCast_01.jpg');
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100vh; /* Modifica: Imposta l'altezza al 100% della viewport */
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  opacity: 0.8;}
