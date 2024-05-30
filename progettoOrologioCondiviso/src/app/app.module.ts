@@ -6,12 +6,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { OrologioComponent } from './orologio/orologio.component';
 import { HttpClient,HttpClientModule } from '@angular/common/http';
+import { WeatherClockComponent } from './weather-clock/weather-clock.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    OrologioComponent
+    OrologioComponent,
+    WeatherClockComponent
   ],
   imports: [
     BrowserModule,
