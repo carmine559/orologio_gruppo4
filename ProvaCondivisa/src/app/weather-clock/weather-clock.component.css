@@ -1,0 +1,72 @@
+.weather-clock-container {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.page-title {
+  opacity: 0;
+  animation: fadeIn 3s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+input {
+  padding: 8px;
+  margin-bottom: 10px;
+  margin-right: 5px; /* Aggiunto margine destro per separare l'input dal pulsante */
+}
+
+button {
+  padding: 8px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 10px; /* Aggiunto margine inferiore per separare il pulsante dal resto delle informazioni */
+}
+
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.weather-info {
+  margin-top: 20px;
+  text-align: center;
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+.weather-info.hidden {
+  opacity: 0;
+}
+
+.weather-info p {
+  margin: 10px 0;
+}
+
+.weather-background {
+  background-image: url('C:/Users/banfi/OneDrive/Desktop/METEOprog/orologio_gruppo4/banfi/src/assets/sfondoMETEO.jpg'); /* Sostituisci con il percorso corretto dell'immagine */
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  opacity: 0.8; /* Assicura che lo sfondo sia dietro agli altri elementi */
+}
