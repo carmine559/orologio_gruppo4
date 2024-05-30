@@ -59,7 +59,7 @@
   }
   
   .weather-background {
-    background-image: url('C:/Users/banfi/OneDrive/Desktop/METEOprog/orologio_gruppo4/banfi/src/assets/sfondoMETEO.jpg'); /* Sostituisci con il percorso corretto dell'immagine */
+    background-image: url('https://media-assets.wired.it/photos/65562048e250788db3b4cd40/16:9/w_1600,c_limit/Google-DeepMind-AI-Header_GraphCast_01.jpg'); /* Sostituisci con il percorso corretto dell'immagine */
     background-size: cover;
     background-position: center;
     width: 100%;

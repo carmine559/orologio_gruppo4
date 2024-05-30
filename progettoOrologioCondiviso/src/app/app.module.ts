@@ -7,6 +7,8 @@ import { AppComponent } from './app.component';
 import { OrologioComponent } from './orologio/orologio.component';
 import { HttpClient,HttpClientModule } from '@angular/common/http';
 import { WeatherClockComponent } from './weather-clock/weather-clock.component';
+import { FormsModule } from '@angular/forms';
+
 
 
 @NgModule({
@@ -18,7 +20,9 @@ import { WeatherClockComponent } from './weather-clock/weather-clock.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
