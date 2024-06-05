@@ -1,7 +1,16 @@
+<!-- weather-clock.component.html -->
+
 <div class="weather-background">
   <div class="weather-clock-container">
-    <h2 class="page-title">Weather & Time</h2>
-    <input type="text" [(ngModel)]="city" placeholder="Enter city" />
+    <h2 class="page-title">METEOROLOGIO</h2>
+    <div class="input-container">
+      <input
+        type="text"
+        [(ngModel)]="city"
+        placeholder="Enter city"
+        style="text-align: center"
+      />
+    </div>
     <button (click)="getWeatherAndTime()">Get Weather & Time</button>
     <div
       *ngIf="weather || time"
@@ -9,8 +18,12 @@
       [ngClass]="{ hidden: !weather && !time }"
     >
       <p><strong>Weather:</strong> {{ weather }}</p>
+      <p>
+        <strong class="hidden-text">Time:</strong>
+        <span class="clock-time hidden-text">{{ time }}</span>
+      </p>
       <p><strong>Temperature:</strong> {{ temperature }}°C</p>
-      <p><strong>Time:</strong> {{ time }}</p>
+      <!-- Aggiunto la classe hidden-text -->
       <app-analog-clock [time]="time"></app-analog-clock>
     </div>
   </div>

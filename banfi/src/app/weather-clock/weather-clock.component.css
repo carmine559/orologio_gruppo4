@@ -26,13 +26,15 @@ body, html {
   margin: 0 auto 50px; /* Rimuovi il margine superiore e imposta il margine inferiore a 50px */
   padding: 20px;
   border: 1px solid #ccc;
-  border-radius: 5px;
-  background-color: rgba(255, 255, 255, 0.8); /* Aggiunge un background bianco traslucido */
+  border-radius: 10px; /* Aumenta il raggio del bordo per rendere più arrotondati gli angoli */
+  background-color: rgba(255, 255, 255, 0.9); /* Aumenta leggermente l'opacità del background */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Aggiunge un'ombra più evidente per una maggiore profondità */
 }
 
 .page-title {
   margin-bottom: 20px;
   font-size: 2em;
+  text-align: center; /* Centra il titolo orizzontalmente */
 }
 
 input[type="text"] {
@@ -41,6 +43,7 @@ input[type="text"] {
   border: none;
   border-radius: 5px;
   margin-bottom: 10px;
+  width: 100%; /* Imposta la larghezza del campo di input al 100% */
 }
 
 button {
@@ -51,6 +54,7 @@ button {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  width: 100%; /* Imposta la larghezza del pulsante al 100% */
 }
 
 button:hover {
@@ -59,13 +63,37 @@ button:hover {
 
 .weather-info {
   margin-top: 20px;
+  text-align: center; /* Centra il contenuto all'interno del riquadro */
 }
 
+/* weather-clock.component.css */
+
 .weather-info p {
-  margin: 5px 0;
+  margin: 10px 0; /* Aggiunge spazio tra i paragrafi */
+  text-align: left;
+  font-size: 1.2em; /* Aumenta leggermente la dimensione del testo */
 }
+
+.weather-info p strong {
+  margin-right: 5px; /* Aggiunge spazio tra il testo forte e il testo normale */
+  font-weight: bold; /* Rende il testo forte in grassetto */
+}
+
+.weather-info p::after {
+  display: none;
+}
+
+.weather-info p:nth-child(odd) {
+  background-color: #f0f0f0; /* Aggiunge un background chiaro ai paragrafi dispari */
+  padding: 10px; /* Aggiunge spazio interno ai paragrafi dispari */
+  border-radius: 5px; /* Aggiunge bordi arrotondati ai paragrafi dispari */
+}
+
 
 .hidden {
   display: none;
 }
 
+.hidden-text {
+  visibility: hidden;
+}

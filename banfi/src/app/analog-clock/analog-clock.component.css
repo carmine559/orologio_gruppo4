@@ -2,8 +2,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100px;  /* Adjusted height for better fit */
-  width: 300px;   /* Adjusted width for better fit */
+  height: 100px;
+  width: 300px;
   background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
   color: #ffffff;
   font-family: 'Courier New', Courier, monospace;
@@ -11,10 +11,20 @@
   border-radius: 10px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
   margin: 20px auto;
-  border: 2px solid #ffffff;
+  border: 2px solid transparent; /* Trasparenza per evitare spostamenti */
+  transition: border-color 0.3s ease; /* Transizione per il cambio di colore del bordo */
+  cursor: pointer; /* Cambia il cursore al passaggio del mouse */
+}
+
+.digital-clock:hover {
+  border-color: #ffffff; /* Cambia il colore del bordo al passaggio del mouse */
 }
 
 .digital-clock h2 {
   margin: 0;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.clock-time {
+  font-size: 1.2em;
 }
