@@ -1,12 +1,10 @@
 FROM node:slim
 
-WORKDIR /banfi
+WORKDIR /usr/src/app
 
-COPY src .
+COPY . .
 COPY package.json .
-
-RUN npm install -g @angular/cli
 
 RUN npm install
 
-CMD ["ng", "serve"]
+CMD ["npm", "start", "--host", "orologio-meteo-app"]
