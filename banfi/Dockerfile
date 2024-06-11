@@ -2,9 +2,10 @@ FROM node:slim
 
 WORKDIR /usr/src/app
 
-COPY . .
-COPY package.json .
-
+COPY package*.json .
 RUN npm install
+COPY . .
 
-CMD ["npm", "start", "--host", "orologio-meteo-app"]
+EXPOSE 4200
+
+CMD ["npm", "start"]
